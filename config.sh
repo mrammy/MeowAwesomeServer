@@ -1,1 +1,3 @@
+#!/bin/bash
+CURRENTDIR=`pwd`
 FORGEVERSION=1.7.10-10.13.4.1517-1.7.10

@@ -1,4 +1,6 @@
-CURRENTDIR=`pwd` 
+#!/bin/bash
+source ./config.sh
+
 rsync -h -v -r -P -t  $CURRENTDIR/config/JourneyMapServer $CURRENTDIR/Archive/serverconfigs/ && rm -rf $CURRENTDIR/config/JourneyMapServer
 rsync -h -v -r -P -t  $CURRENTDIR/config/TickProfiler.cfg $CURRENTDIR/Archive/serverconfigs/ && rm -rf $CURRENTDIR/config/TickProfiler.cfg
 rsync -h -v -r -P -t  $CURRENTDIR/config/tickDynamic.cfg $CURRENTDIR/Archive/serverconfigs/ && rm -rf $CURRENTDIR/config/tickDynamic.cfg
