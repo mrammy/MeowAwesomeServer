@@ -5,9 +5,10 @@
 !updater.sh
 !freshinstall.sh
 !config.sh
+!Flan
 !Archive/
 Archive/*
 !Archive/serverconfigs/
 Archive/serverconfigs/JourneyMapServer
 !Archive/servermods/
-!Archive/pack/
+!Archive/MeowAwesome/

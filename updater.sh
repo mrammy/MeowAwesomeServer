@@ -8,13 +8,13 @@ rsync -avx $CURRENTDIR/mods $CURRENTDIR/Archive/ && rm -rf $CURRENTDIR/mods
 rsync -avx $CURRENTDIR/scripts $CURRENTDIR/Archive/ && rm -rf $CURRENTDIR/scripts
 rsync -h -v -r -P -t  $CURRENTDIR/world $CURRENTDIR/Archive/
 
+git submodule update --remote
+git add $CURRENTDIR/Archive/MeowAwesome
+git commit -m "Update submodule tracking to the latest commit"
 
-git submodule update
-
-
-rsync -avx $CURRENTDIR/Archive/pack/minecraft/mods $CURRENTDIR/
-rsync -avx $CURRENTDIR/Archive/pack/minecraft/config $CURRENTDIR/
-rsync -avx $CURRENTDIR/Archive/pack/minecraft/scripts $CURRENTDIR/
+rsync -avx $CURRENTDIR/Archive/MeowAwesome/minecraft/mods $CURRENTDIR/
+rsync -avx $CURRENTDIR/Archive/MeowAwesome/minecraft/config $CURRENTDIR/
+rsync -avx $CURRENTDIR/Archive/MeowAwesome/minecraft/scripts $CURRENTDIR/
 rsync -avx $CURRENTDIR/Archive/servermods/* $CURRENTDIR/mods/
 rsync -avx $CURRENTDIR/Archive/serverconfigs/* $CURRENTDIR/config/
 

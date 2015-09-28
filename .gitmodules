@@ -1,3 +1,6 @@
 [submodule "Archive/pack"]
 	path = Archive/pack
 	url = https://github.com/mrammy/MeowAwesome
+[submodule "Archive/MeowAwesome"]
+	path = Archive/MeowAwesome
+	url = https://github.com/mrammy/MeowAwesome
