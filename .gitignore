@@ -3,3 +3,11 @@
 !.gitignore
 !serverstart.sh
 !updater.sh
+!freshinstall.sh
+!config.sh
+!Archive/
+Archive/*
+!Archive/serverconfigs/
+Archive/serverconfigs/JourneyMapServer
+!Archive/servermods/
+!Archive/pack/

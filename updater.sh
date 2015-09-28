@@ -1,19 +1,24 @@
-rsync -h -v -r -P -t  ~/Server3/config/JourneyMapServer ~/Server3/Archive/serverconfigs/ && rm -rf ~/Server3/config/JourneyMapServer
-rsync -h -v -r -P -t  ~/Server3/config/TickProfiler.cfg ~/Server3/Archive/serverconfigs/ && rm -rf ~/Server3/config/TickProfiler.cfg
-rsync -h -v -r -P -t  ~/Server3/config/tickDynamic.cfg ~/Server3/Archive/serverconfigs/ && rm -rf ~/Server3/config/tickDynamic.cfg
-rsync -h -v -r -P -t  ~/Server3/config/ForgeAutoShutdown.cfg ~/Server3/Archive/serverconfigs/ && rm -rf ~/Server3/config/ForgeAutoShutdown.cfg
-rsync -avx ~/Server3/config ~/Server3/Archive/ && rm -rf ~/Server3/config
-rsync -avx ~/Server3/mods ~/Server3/Archive/ && rm -rf ~/Server3/mods
-rsync -avx ~/Server3/scripts ~/Server3/Archive/ && rm -rf ~/Server3/scripts
-rsync -h -v -r -P -t  ~/Server3/world ~/Server3/Archive/
-cd ~/MeowAwesome
-git pull
-cd ~/
-rsync -avx ~/MeowAwesome/minecraft/mods ~/Server3/
-rsync -avx ~/MeowAwesome/minecraft/config ~/Server3/
-rsync -avx ~/MeowAwesome/minecraft/scripts ~/Server3/
-rsync -avx ~/Server3/Archive/servermods/* ~/Server3/mods/
-rsync -avx ~/Server3/Archive/serverconfigs/* ~/Server3/config/
+CURRENTDIR=`pwd` 
+rsync -h -v -r -P -t  $CURRENTDIR/config/JourneyMapServer $CURRENTDIR/Archive/serverconfigs/ && rm -rf $CURRENTDIR/config/JourneyMapServer
+rsync -h -v -r -P -t  $CURRENTDIR/config/TickProfiler.cfg $CURRENTDIR/Archive/serverconfigs/ && rm -rf $CURRENTDIR/config/TickProfiler.cfg
+rsync -h -v -r -P -t  $CURRENTDIR/config/tickDynamic.cfg $CURRENTDIR/Archive/serverconfigs/ && rm -rf $CURRENTDIR/config/tickDynamic.cfg
+rsync -h -v -r -P -t  $CURRENTDIR/config/ForgeAutoShutdown.cfg $CURRENTDIR/Archive/serverconfigs/ && rm -rf $CURRENTDIR/config/ForgeAutoShutdown.cfg
+rsync -avx $CURRENTDIR/config $CURRENTDIR/Archive/ && rm -rf $CURRENTDIR/config
+rsync -avx $CURRENTDIR/mods $CURRENTDIR/Archive/ && rm -rf $CURRENTDIR/mods
+rsync -avx $CURRENTDIR/scripts $CURRENTDIR/Archive/ && rm -rf $CURRENTDIR/scripts
+rsync -h -v -r -P -t  $CURRENTDIR/world $CURRENTDIR/Archive/
+
+
+git submodule update
+
+
+rsync -avx $CURRENTDIR/Archive/pack/minecraft/mods $CURRENTDIR/
+rsync -avx $CURRENTDIR/Archive/pack/minecraft/config $CURRENTDIR/
+rsync -avx $CURRENTDIR/Archive/pack/minecraft/scripts $CURRENTDIR/
+rsync -avx $CURRENTDIR/Archive/servermods/* $CURRENTDIR/mods/
+rsync -avx $CURRENTDIR/Archive/serverconfigs/* $CURRENTDIR/config/
 
 # Clean clientside only mods here
-rm -rfv ~/Server3/mods/ChatFlow*.jar ~/Server3/mods/ShadowTweaks*.jar ~/Server3/mods/ModpackInfo*.jar ~/Server3/mods/BetterFps*.jar ~/Server3/mods/AquaTweaks*.jar ~/Server3/mods/LoadingProfiler*.jar ~/Server3/mods/SoundFilters*.jar ~/Server3/mods/MouseTweaks*.jar ~/Server3/mods/BabyAnimals*.jar ~/Server3/mods/DefaultWorldGenerator*.jar ~/Server3/mods/TabbyChat*.jar ~/Server3/mods/ResourceLoader*.jar ~/Server3/mods/Ding*.jar ~/Server3/mods/particledist*.jar ~/Server3/mods/UnicodeFontFixer*.jar ~/Server3/mods/journeymap*.jar ~/Server3/mods/CustomMainMenu*.jar ~/Server/mods/BetterFps*.jar
+rm -rfv $CURRENTDIR/mods/ChatFlow*.jar $CURRENTDIR/mods/ShadowTweaks*.jar $CURRENTDIR/mods/ModpackInfo*.jar $CURRENTDIR/mods/BetterFps*.jar $CURRENTDIR/mods/AquaTweaks*.jar $CURRENTDIR/mods/LoadingProfiler*.jar $CURRENTDIR/mods/SoundFilters*.jar $CURRENTDIR/mods/MouseTweaks*.jar $CURRENTDIR/mods/BabyAnimals*.jar $CURRENTDIR/mods/DefaultWorldGenerator*.jar $CURRENTDIR/mods/TabbyChat*.jar $CURRENTDIR/mods/ResourceLoader*.jar $CURRENTDIR/mods/Ding*.jar $CURRENTDIR/mods/particledist*.jar $CURRENTDIR/mods/UnicodeFontFixer*.jar $CURRENTDIR/mods/journeymap*.jar $CURRENTDIR/mods/CustomMainMenu*.jar ~/Server/mods/BetterFps*.jar
+
+unset CURRENTDIR
