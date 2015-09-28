@@ -1,0 +1,5 @@
+# add our ".gitinclude" file
+/*
+!.gitignore
+!serverstart.sh
+!updater.sh
