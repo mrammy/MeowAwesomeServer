@@ -7,4 +7,3 @@
 [submodule "Archive/serverconfigs/MyTown/protections"]
 	path = Archive/serverconfigs/MyTown/protections
 	url = https://github.com/MyEssentials/MyTown2-Protections
-	branch = post-0.2.0b
