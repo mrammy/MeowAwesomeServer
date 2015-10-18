@@ -5,7 +5,6 @@
 !updater.sh
 !freshinstall.sh
 !config.sh
-!Flan
 !Archive/
 Archive/*
 !Archive/serverconfigs/
