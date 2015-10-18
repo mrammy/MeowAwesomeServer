@@ -1,9 +1,3 @@
-[submodule "Archive/pack"]
-	path = Archive/pack
-	url = https://github.com/mrammy/MeowAwesome
 [submodule "Archive/MeowAwesome"]
 	path = Archive/MeowAwesome
 	url = https://github.com/mrammy/MeowAwesome
-[submodule "Archive/serverconfigs/MyTown/protections"]
-	path = Archive/serverconfigs/MyTown/protections
-	url = https://github.com/MyEssentials/MyTown2-Protections
